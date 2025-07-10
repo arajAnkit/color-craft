@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -6,6 +6,7 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -53,6 +54,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
         indigo: {
           "600": "#7C3AED",
         },
@@ -74,14 +82,40 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "float-delayed": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "float-fast": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-25px)" },
+        },
+        "gradient-shift": {
+          "0%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+          "100%": { "background-position": "0% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        "float-delayed": "float-delayed 8s ease-in-out infinite",
+        "float-slow": "float-slow 10s ease-in-out infinite",
+        "float-fast": "float-fast 4s ease-in-out infinite",
+        gradient: "gradient-shift 3s ease infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

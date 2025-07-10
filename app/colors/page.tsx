@@ -21,16 +21,13 @@ export default function ColorsPage() {
     { id: "all", name: "All Shades", color: "#E2E8F0" },
     { id: "red", name: "Red", color: "#EF4444" },
     { id: "orange", name: "Orange", color: "#F97316" },
-    { id: "brown", name: "Brown", color: "#92400E" },
     { id: "yellow", name: "Yellow", color: "#EAB308" },
     { id: "green", name: "Green", color: "#22C55E" },
-    { id: "turquoise", name: "Turquoise", color: "#14B8A6" },
     { id: "blue", name: "Blue", color: "#3B82F6" },
-    { id: "violet", name: "Violet", color: "#8B5CF6" },
+    { id: "purple", name: "Purple", color: "#8B5CF6" },
     { id: "pink", name: "Pink", color: "#EC4899" },
-    { id: "white", name: "White", color: "#FFFFFF" },
-    { id: "gray", name: "Gray", color: "#6B7280" },
     { id: "black", name: "Black", color: "#000000" },
+    { id: "white", name: "White", color: "#FFFFFF" },
   ];
 
   // Filter colors based on search term and category
@@ -42,6 +39,7 @@ export default function ColorsPage() {
       selectedCategory === "all" || color.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+  console.log(filteredColors);
 
   const copyToClipboard = (
     text: string,

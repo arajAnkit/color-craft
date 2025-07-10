@@ -1,5 +1,5 @@
-import { ColorGridSkeleton } from "@/components/loading/color-card-skeleton"
-import { Skeleton } from "@/components/ui/skeleton"
+import { ColorGridSkeleton } from "@/components/loading/color-card-skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ColorsLoading() {
   return (
@@ -27,5 +27,5 @@ export default function ColorsLoading() {
       {/* Color Grid Skeleton */}
       <ColorGridSkeleton />
     </div>
-  )
+  );
 }
